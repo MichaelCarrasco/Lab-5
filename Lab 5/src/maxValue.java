@@ -7,6 +7,7 @@ public class maxValue {
 	    String fileName="C:\\Users\\Michael\\Documents\\input.csv";
 	    File f = new File(fileName);
 	    Scanner fileScan = new Scanner(f);
+	    System.out.println("Maximum values");
 
 	    for (int i = 1; fileScan.hasNext(); i++) {
 	        String line = fileScan.nextLine();
@@ -27,3 +28,4 @@ public class maxValue {
 	}
 
 }
+
