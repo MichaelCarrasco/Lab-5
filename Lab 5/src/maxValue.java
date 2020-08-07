@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.File;
 import java.util.Arrays;
 import java.util.Scanner;
 public class maxValue {
@@ -11,7 +11,7 @@ public class maxValue {
 
 	    for (int i = 1; fileScan.hasNext(); i++) {
 	        String line = fileScan.nextLine();
-	        System.out.printf("ROW %d: %d%n", i, extractMaximum(line));
+	        System.out.printf("ROW %d: %d%n", i, extractMaximum(line)); //prints out the max value per row
 	    }
 	    fileScan.close();
 	}
@@ -21,7 +21,7 @@ public class maxValue {
 
 	static int extractMaximum(String str)
 	{
-	     return Arrays.stream(str.split("\\D+"))
+	     return Arrays.stream(str.split("\\D+")) //calculates our max value in the string
 	                    .map(x -> Integer.parseInt(x))
 	                    .max(Integer::compare)
 	                    .get();
